@@ -35,17 +35,120 @@
 // console.log(a);
 
 //!  For let
-if (true) {
-  let a = "hello world";
-  a ="hello";
-  console.log(a);
-}
-//console.log(a);// not print hello world beacuse let block scope and local variable to isay access krna hay to scope kay andr karo
+// if (true) {
+//   let a = "hello world";
+//   a ="hello";
+//   console.log(a);
+// }
+// //console.log(a);// not print hello world beacuse let block scope and local variable to isay access krna hay to scope kay andr karo
 
-//!  For const
-if (true) {
-        const a = "hello world";
-        //a ="hello";// not update and change value
-        console.log(a);
-      }
-      console.log(a);// cosnt is a local variable and block scope so alway access scope kay andar hoga
+// //!  For const
+// if (true) {
+//         const a = "hello world";
+//         //a ="hello";// not update and change value
+//         console.log(a);
+//       }
+      //console.log(a);// cosnt is a local variable and block scope so alway access scope kay andar hoga
+//---------------------------------------------------------------------------------------------
+//?Topic: Template literals
+//Template literals allows multiline strings:
+//Template Literals use back-ticks (``)
+
+//? Example no:1
+// let Fname= "daniyal";
+// let lname = "ali";
+// console.log(`first name is ${Fname} and last name is ${lname}` );
+// //? Example no:2
+// console.log(`what is your name`); 
+
+// let num1 = 10;
+// let num2 =20;
+// console.log(`the sum of two num is ${num1 + num2}`);
+
+//! Topic : String Method
+
+let firstName="daniyal";
+let lastName = "ali";
+//check the firstName start with d or not 
+console.log(`${firstName}`.startsWith('d'));// boolean return karayga ans correct hay to true otherwise false
+//check the lasttName start with d or not 
+console.log(`${lastName}`.endsWith('l'));// boolean return karayga 
+//includes() string method includes check karta hay kay kya ye string exist karta hay firstname kay andar.
+console.log(`${firstName}`.includes("iyal"));//boolean return karay ga ans correct hay to true otherwise false
+//!PROMISES
+// method#1
+// const promomiseOne = new Promise(function(resolve , reject){
+//       //do an async task
+//       // DB calls & Cryptography,network
+//       setTimeout(function(){
+//             console.log("async task are completed");
+//             resolve();
+//       },1000)
+// })
+// promomiseOne.then(function(){
+//       console.log("promised one");
+// })
+
+//!Method#2
+//without variable
+// new Promise(function(resolve,reject){
+//       setTimeout(function(){
+//             console.log("Asyns task two");
+//             resolve();
+//       },1000)
+// }).then(function(){
+//       console.log("Async two is resolved");
+// })
+
+//!Method3
+// const promiseThree = new Promise(function(resolve,reject){
+//       setTimeout(function(){
+//             console.log("promise task three");
+//             resolve({userName:"daniyal",email:"dani@gmail.com"})
+//       },1000)
+// })
+// promiseThree.then(function(user){
+//       console.log(user);
+
+// })
+//! Method4
+const promiseFour = new Promise(function(resolve,reject){
+      setTimeout(function(){
+            let error= false;
+            if(!error){
+                  resolve({userName:"daniyal",email:"dani@gmail.com"})
+            }else{
+                  reject("Error: something went wrong");
+            }
+      },1000)
+})
+promiseFour.then((user)=>{
+      console.log(user);
+      return user.userName;
+}).then((userName)=>{
+      console.log(userName);
+}).catch(function(error){
+      console.log(error);
+}).finally("the promise will be resolved or reject");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
