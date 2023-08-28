@@ -70,11 +70,11 @@
 let firstName="daniyal";
 let lastName = "ali";
 //check the firstName start with d or not 
-console.log(`${firstName}`.startsWith('d'));// boolean return karayga ans correct hay to true otherwise false
+// console.log(`${firstName}`.startsWith('d'));// boolean return karayga ans correct hay to true otherwise false
 //check the lasttName start with d or not 
-console.log(`${lastName}`.endsWith('l'));// boolean return karayga 
+// console.log(`${lastName}`.endsWith('l'));// boolean return karayga 
 //includes() string method includes check karta hay kay kya ye string exist karta hay firstname kay andar.
-console.log(`${firstName}`.includes("iyal"));//boolean return karay ga ans correct hay to true otherwise false
+///boolean return karay ga ans correct hay to true otherwise false
 //!PROMISES
 // method#1
 // const promomiseOne = new Promise(function(resolve , reject){
@@ -89,8 +89,8 @@ console.log(`${firstName}`.includes("iyal"));//boolean return karay ga ans corre
 //       console.log("promised one");
 // })
 
-//!Method#2
-//without variable
+// // !Method#2
+// // without variable
 // new Promise(function(resolve,reject){
 //       setTimeout(function(){
 //             console.log("Asyns task two");
@@ -100,7 +100,7 @@ console.log(`${firstName}`.includes("iyal"));//boolean return karay ga ans corre
 //       console.log("Async two is resolved");
 // })
 
-//!Method3
+// // !Method3
 // const promiseThree = new Promise(function(resolve,reject){
 //       setTimeout(function(){
 //             console.log("promise task three");
@@ -111,32 +111,102 @@ console.log(`${firstName}`.includes("iyal"));//boolean return karay ga ans corre
 //       console.log(user);
 
 // })
-//! Method4
-const promiseFour = new Promise(function(resolve,reject){
-      setTimeout(function(){
-            let error= false;
-            if(!error){
-                  resolve({userName:"daniyal",email:"dani@gmail.com"})
-            }else{
-                  reject("Error: something went wrong");
-            }
-      },1000)
-})
-promiseFour.then((user)=>{
-      console.log(user);
-      return user.userName;
-}).then((userName)=>{
-      console.log(userName);
-}).catch(function(error){
-      console.log(error);
-}).finally("the promise will be resolved or reject");
+// // ! Method4
+// const promiseFour = new Promise(function(resolve,reject){
+//       setTimeout(function(){
+//             let error= false;
+//             if(!error){
+//                   resolve({userName:"daniyal",email:"dani@gmail.com"})
+//             }else{
+//                   reject("Error: something went wrong");
+//             }
+//       },1000)
+// })
+// promiseFour.then((user)=>{
+//       console.log(user);
+//       return user.userName;
+// }).then((userName)=>{
+//       console.log(userName);
+// }).catch(function(error){
+//       console.log(error);
+// }).finally("the promise will be resolved or reject");
+
+// // promise with Async and await function
+// const fivePromise = new Promise(function(resolve,reject){
+//       setTimeout(function(){
+//             let error = true;
+//             if(!error){
+//                   resolve({username:"daniyal",email:"dani@gmail.com"})
+//             }else{
+//                   reject("some thing went wrong")
+//             }
+//       },1000)
+// })
+// method 4 may ham nay .then OR .catch use keya hay
+// ab ham Async and await use kray gey
+// Async and await k andr try and catch user kray gay
+// async function consumePromise(){
+//       try {
+//             const response = await fivePromise
+//             console.log(response);
+//       }catch(error){
+//             console.log(error);
+//       }
+// }
+// consumePromise();
+
+// Asyn and await (data fetch )
 
 
+//for in loop (OBJECT)
 
+const programming = ["js", "rb", "py", "java", "cpp"]
 
+// for (const key in programming) {
+//     console.log(programming[key]);
+// }
 
+programming.forEach( ( item ,index ,arr )=>{
+      console.log(item ,index , arr)
+} )
 
+// const myCoding = [
+//       {
+//           languageName: "javascript",
+//           languageFileName: "js"
+//       },
+//       {
+//           languageName: "java",
+//           languageFileName: "java"
+//       },
+//       {
+//           languageName: "python",
+//           languageFileName: "py"
+//       },
+//   ]
+//   programming.forEach(( item )=>{
+//       console.log(item.languageName);
+//   } )
 
+  const myCoding = [
+      {
+          languageName: "javascript",
+          languageFileName: "js"
+      },
+      {
+          languageName: "java",
+          languageFileName: "java"
+      },
+      {
+          languageName: "python",
+          languageFileName: "py"
+      },
+  ]
+  
+  myCoding.forEach( (item ) => {
+      
+      console.log(item.languageName );
+  } )
 
 
 
